@@ -51,6 +51,7 @@ import static slimeknights.tconstruct.shared.TinkerCommons.nuggetManyullyn;
 import static slimeknights.tconstruct.shared.TinkerCommons.nuggetPigIron;
 import static slimeknights.tconstruct.shared.TinkerCommons.oreArdite;
 import static slimeknights.tconstruct.shared.TinkerCommons.oreCobalt;
+import static slimeknights.tconstruct.shared.TinkerCommons.oreTin;
 import static slimeknights.tconstruct.shared.TinkerCommons.searedBrick;
 import static slimeknights.tconstruct.tools.TinkerTools.binding;
 import static slimeknights.tconstruct.tools.TinkerTools.pattern;
@@ -125,6 +126,7 @@ public class TinkerOredict {
     oredict(Blocks.NETHERRACK, "netherrack");
     oredict(Blocks.PRISMARINE, "prismarine");
     oredict(Blocks.VINE, "vine");
+    oredict(Blocks.STONE, "stone");
     // glowstone block, redstone block
 
     oredict(Blocks.DIRT, "dirt");
@@ -173,6 +175,7 @@ public class TinkerOredict {
     // Ores
     oredict(oreCobalt, "oreCobalt");
     oredict(oreArdite, "oreArdite");
+    oredict(oreTin, "oreTin");
 
     // glass
     oredict(blockClearGlass, "blockGlass"); // no blockGlassColorless as then it is assumed as available for staining

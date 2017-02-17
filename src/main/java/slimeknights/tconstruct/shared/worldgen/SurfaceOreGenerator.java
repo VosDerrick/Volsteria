@@ -97,13 +97,13 @@ public class SurfaceOreGenerator implements IWorldGenerator {
 
   public void generateSurfaceOre(WorldGenMinable gen, int rate, Random random, int chunkX, int chunkZ, World world) {
     BlockPos pos;
-    for(int i = 0; i < rate; i += 2) {
+    for(int i = 0; i < rate; i += 5) {
       pos = new BlockPos(chunkX * 16, 16, chunkZ * 16);
-      pos = pos.add(random.nextInt(4), random.nextInt(64), random.nextInt(4));
+      pos = pos.add(random.nextInt(2), random.nextInt(64), random.nextInt(2));
       gen.generate(world, random, pos);
 
       pos = new BlockPos(chunkX * 16, 16, chunkZ * 16);
-      pos = pos.add(random.nextInt(16), random.nextInt(64), random.nextInt(4));
+      pos = pos.add(random.nextInt(2), random.nextInt(64), random.nextInt(2));
       gen.generate(world, random, pos);
     }
   }

@@ -44,6 +44,7 @@ import slimeknights.tconstruct.shared.block.BlockSlimeCongealed;
 import slimeknights.tconstruct.shared.block.BlockSoil;
 import slimeknights.tconstruct.shared.item.ItemMetaDynamicTinkers;
 import slimeknights.tconstruct.shared.worldgen.NetherOreGenerator;
+import slimeknights.tconstruct.shared.worldgen.SurfaceOreGenerator;
 import slimeknights.tconstruct.tools.TinkerTools;
 
 /**
@@ -96,6 +97,7 @@ public class TinkerCommons extends TinkerPulse {
   public static ItemStack oreTin;
 
   public static ItemStack blockCobalt;
+  public static ItemStack blockTin;
   public static ItemStack blockArdite;
   public static ItemStack blockManyullyn;
   public static ItemStack blockPigIron;
@@ -116,6 +118,7 @@ public class TinkerCommons extends TinkerPulse {
   // Nugget Itemstacks
   public static ItemStack nuggetCobalt;
   public static ItemStack nuggetArdite;
+  public static ItemStack nuggetTin;
   public static ItemStack nuggetManyullyn;
   public static ItemStack nuggetPigIron;
   public static ItemStack nuggetKnightSlime;
@@ -124,6 +127,7 @@ public class TinkerCommons extends TinkerPulse {
   // Ingot Itemstacks
   public static ItemStack ingotCobalt;
   public static ItemStack ingotArdite;
+  public static ItemStack ingotTin;
   public static ItemStack ingotManyullyn;
   public static ItemStack ingotPigIron;
   public static ItemStack ingotKnightSlime;
@@ -201,6 +205,7 @@ public class TinkerCommons extends TinkerPulse {
 
     oreCobalt = new ItemStack(blockOre, 1, BlockOre.OreTypes.COBALT.getMeta());
     oreArdite = new ItemStack(blockOre, 1, BlockOre.OreTypes.ARDITE.getMeta());
+    oreTin = new ItemStack(blockOre, 1, BlockOre.OreTypes.TIN.getMeta());
 
     blockFirewood = registerEnumBlock(new BlockFirewood(), "firewood");
     blockFirewood.setLightLevel(0.5f);
@@ -338,6 +343,7 @@ public class TinkerCommons extends TinkerPulse {
     proxy.init();
 
     GameRegistry.registerWorldGenerator(NetherOreGenerator.INSTANCE, 0);
+    GameRegistry.registerWorldGenerator(SurfaceOreGenerator.INSTANCE, 0);
 
     MinecraftForge.EVENT_BUS.register(new AchievementEvents());
     MinecraftForge.EVENT_BUS.register(new BlockEvents());
