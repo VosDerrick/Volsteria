@@ -60,31 +60,31 @@ public final class Config {
   public static boolean genArdite = true;
   public static int arditeRate = 20; // max. ardite per chunk
   public static boolean genTin = true;
-  public static int tinRate = 300;
+  public static int tinRate = 20;
   public static boolean genAluminum = true;
-  public static int aluminumRate = 300;
+  public static int aluminumRate = 35;
   public static boolean genPalladium = true;
-  public static int palladiumRate = 300;
+  public static int palladiumRate = 10;
   public static boolean genPlatinum = true;
-  public static int platinumRate = 300;
+  public static int platinumRate = 15;
   public static boolean genCopper = true;
-  public static int copperRate = 300;
+  public static int copperRate = 25;
   public static boolean genSilver = true;
-  public static int silverRate = 300;
+  public static int silverRate = 10;
   public static boolean genChromium = true;
-  public static int chromiumRate = 300;
+  public static int chromiumRate = 25;
   public static boolean genZinc = true;
-  public static int zincRate = 300;
+  public static int zincRate = 25;
   public static boolean genTitanium = true;
-  public static int titaniumRate = 300;
+  public static int titaniumRate = 15;
   public static boolean genTungsten = true;
-  public static int tungstenRate = 300;
+  public static int tungstenRate = 15;
   public static boolean genSulfur = true;
-  public static int sulfurRate = 300;
+  public static int sulfurRate = 15;
   public static boolean genNickel = true;
-  public static int nickelRate = 300;
+  public static int nickelRate = 30;
   public static boolean genLead = true;
-  public static int leadRate = 300;
+  public static int leadRate = 30;
 
 
   // Clientside configs
