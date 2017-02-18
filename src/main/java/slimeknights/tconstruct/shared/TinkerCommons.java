@@ -95,6 +95,18 @@ public class TinkerCommons extends TinkerPulse {
   public static ItemStack oreCobalt;
   public static ItemStack oreArdite;
   public static ItemStack oreTin;
+  public static ItemStack oreAluminum;
+  public static ItemStack orePalladium;
+  public static ItemStack orePlatinum;
+  public static ItemStack oreCopper;
+  public static ItemStack oreSilver;
+  public static ItemStack oreChromium;
+  public static ItemStack oreZinc;
+  public static ItemStack oreTitanium;
+  public static ItemStack oreTungsten;
+  public static ItemStack oreSulfur;
+  public static ItemStack oreNickel;
+  public static ItemStack oreLead;
 
   public static ItemStack blockCobalt;
   public static ItemStack blockTin;
@@ -206,6 +218,18 @@ public class TinkerCommons extends TinkerPulse {
     oreCobalt = new ItemStack(blockOre, 1, BlockOre.OreTypes.COBALT.getMeta());
     oreArdite = new ItemStack(blockOre, 1, BlockOre.OreTypes.ARDITE.getMeta());
     oreTin = new ItemStack(blockOre, 1, BlockOre.OreTypes.TIN.getMeta());
+    oreAluminum = new ItemStack(blockOre, 1, BlockOre.OreTypes.ALUMINUM.getMeta());
+    orePalladium = new ItemStack(blockOre, 1, BlockOre.OreTypes.PALLADIUM.getMeta());
+    orePlatinum = new ItemStack(blockOre, 1, BlockOre.OreTypes.PLATINUM.getMeta());
+    oreCopper = new ItemStack(blockOre, 1, BlockOre.OreTypes.COPPER.getMeta());
+    oreSilver = new ItemStack(blockOre, 1, BlockOre.OreTypes.SILVER.getMeta());
+    oreChromium = new ItemStack(blockOre, 1, BlockOre.OreTypes.CHROMIUM.getMeta());
+    oreZinc = new ItemStack(blockOre, 1, BlockOre.OreTypes.ZINC.getMeta());
+    oreTitanium = new ItemStack(blockOre, 1, BlockOre.OreTypes.TITANIUM.getMeta());
+    oreTungsten = new ItemStack(blockOre, 1, BlockOre.OreTypes.TUNGSTEN.getMeta());
+    oreSulfur = new ItemStack(blockOre, 1, BlockOre.OreTypes.SULFUR.getMeta());
+    oreNickel = new ItemStack(blockOre, 1, BlockOre.OreTypes.NICKEL.getMeta());
+    oreLead = new ItemStack(blockOre, 1, BlockOre.OreTypes.LEAD.getMeta());
 
     blockFirewood = registerEnumBlock(new BlockFirewood(), "firewood");
     blockFirewood.setLightLevel(0.5f);

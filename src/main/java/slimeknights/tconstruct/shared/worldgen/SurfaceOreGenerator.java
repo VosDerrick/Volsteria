@@ -27,60 +27,67 @@ import slimeknights.tconstruct.common.config.Config;
 import slimeknights.tconstruct.shared.TinkerCommons;
 import slimeknights.tconstruct.shared.block.BlockOre;
 
-// public class ModWorldGen implements IWorldGenerator {
-
-// 	@Override
-// 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-// 		if (world.provider.getDimension() == 0) { // the overworld
-// 			generateOverworld(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
-// 		}
-// 	}
-
-// 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-// 		// generateOre(ModBlocks.oreCopper.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreAluminum.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.orePlatinum.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreSilver.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreChromium.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		generateOre(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.TIN.getMeta()), 5, BlockMatcher.forBlock(Blocks.STONE));
-// 		// generateOre(ModBlocks.oreManganese.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreTitanium.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreVanadium.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreLead.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.oreNickel.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 		// generateOre(ModBlocks.orePalladium.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 4 + random.nextInt(4), 6);
-// 	}
-
-// 	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) {
-// 		int deltaY = maxY - minY;
-
-// 		for (int i = 0; i < chances; i++) {
-// 			BlockPos pos= new BlockPos(x + random.nextInt(16), minY + random.nextInt(deltaY), z + random.nextInt(16));
-
-// 			WorldGenMinable generator = new WorldGenMinable(ore, size);
-// 			generator.generate(world, random, pos);
-// 		}
-// 	}
-
-// }
-
-
 
 public class SurfaceOreGenerator implements IWorldGenerator {
 
   public static SurfaceOreGenerator INSTANCE = new SurfaceOreGenerator();
 
   public WorldGenMinable tinGen;
+  public WorldGenMinable aluminumGen;
+  public WorldGenMinable palladiumGen;
+  public WorldGenMinable platinumGen;
+  public WorldGenMinable silverGen;
+  public WorldGenMinable copperGen;
+  public WorldGenMinable chromiumGen;
+  public WorldGenMinable zincGen;
+  public WorldGenMinable titaniumGen;
+  public WorldGenMinable tungstenGen;
+  public WorldGenMinable sulfurGen;
+  public WorldGenMinable nickelGen;
+  public WorldGenMinable leadGen;
   // public WorldGenMinable arditeGen;
 
   public SurfaceOreGenerator() {
+    
     tinGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.TIN.getMeta()),
                                     5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    aluminumGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.ALUMINUM.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    palladiumGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.PALLADIUM.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    platinumGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.PLATINUM.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    copperGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.COPPER.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    silverGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.SILVER.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    chromiumGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.CHROMIUM.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    zincGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.ZINC.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    titaniumGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.TITANIUM.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    tungstenGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.TUNGSTEN.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    sulfurGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.SULFUR.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    nickelGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.NICKEL.getMeta()),
+                                    5,
+                                    BlockMatcher.forBlock(Blocks.STONE));    
+    leadGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.LEAD.getMeta()),
+                                    5,
                                     BlockMatcher.forBlock(Blocks.STONE));
-
-    // arditeGen = new WorldGenMinable(TinkerCommons.blockOre.getStateFromMeta(BlockOre.OreTypes.ARDITE.getMeta()),
-    //                                 5,
-    //                                 BlockMatcher.forBlock(Blocks.NETHERRACK));
   }
 
   @Override
@@ -89,9 +96,44 @@ public class SurfaceOreGenerator implements IWorldGenerator {
       if(Config.genTin) {
         generateSurfaceOre(tinGen, Config.tinRate, random, chunkX, chunkZ, world);
       }
-      // if(Config.genCobalt) {
-      //   generateNetherOre(cobaltGen, Config.cobaltRate, random, chunkX, chunkZ, world);
-      // }
+       if(Config.genAluminum) {
+        generateSurfaceOre(aluminumGen, Config.aluminumRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genPalladium) {
+        generateSurfaceOre(palladiumGen, Config.palladiumRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genPlatinum) {
+        generateSurfaceOre(platinumGen, Config.platinumRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genCopper) {
+        generateSurfaceOre(copperGen, Config.copperRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genSilver) {
+        generateSurfaceOre(silverGen, Config.silverRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genChromium) {
+        generateSurfaceOre(tinGen, Config.chromiumRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genZinc) {
+        generateSurfaceOre(tinGen, Config.zincRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genTitanium) {
+        generateSurfaceOre(tinGen, Config.titaniumRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genTungsten) {
+        generateSurfaceOre(tinGen, Config.tungstenRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genSulfur) {
+        generateSurfaceOre(tinGen, Config.sulfurRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genNickel) {
+        generateSurfaceOre(tinGen, Config.nickelRate, random, chunkX, chunkZ, world);
+      }
+       if(Config.genLead) {
+        generateSurfaceOre(tinGen, Config.leadRate, random, chunkX, chunkZ, world);
+      }
+ 
+
     }
   }
 

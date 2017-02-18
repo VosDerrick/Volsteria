@@ -61,6 +61,31 @@ public final class Config {
   public static int arditeRate = 20; // max. ardite per chunk
   public static boolean genTin = true;
   public static int tinRate = 300;
+  public static boolean genAluminum = true;
+  public static int aluminumRate = 300;
+  public static boolean genPalladium = true;
+  public static int palladiumRate = 300;
+  public static boolean genPlatinum = true;
+  public static int platinumRate = 300;
+  public static boolean genCopper = true;
+  public static int copperRate = 300;
+  public static boolean genSilver = true;
+  public static int silverRate = 300;
+  public static boolean genChromium = true;
+  public static int chromiumRate = 300;
+  public static boolean genZinc = true;
+  public static int zincRate = 300;
+  public static boolean genTitanium = true;
+  public static int titaniumRate = 300;
+  public static boolean genTungsten = true;
+  public static int tungstenRate = 300;
+  public static boolean genSulfur = true;
+  public static int sulfurRate = 300;
+  public static boolean genNickel = true;
+  public static int nickelRate = 300;
+  public static boolean genLead = true;
+  public static int leadRate = 300;
+
 
   // Clientside configs
   public static boolean renderTableItems = true;
@@ -233,6 +258,8 @@ public final class Config {
       slimeIslandsOnlyGenerateInSurfaceWorlds = prop.getBoolean();
       propOrder.add(prop.getName());
 
+
+      // Surface ore generation
       prop = configFile.get(cat, "genTin", genTin);
       prop.setComment("If true, tin will generate in the surface");
       genTin = prop.getBoolean();
@@ -242,6 +269,127 @@ public final class Config {
       prop.setComment("Approx Ores per chunk");
       tinRate = prop.getInt();
       propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genAluminum", genAluminum);
+      prop.setComment("If true, Aluminum will generate in the surface");
+      genAluminum = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "aluminumRate", aluminumRate);
+      prop.setComment("Approx Ores per chunk");
+      aluminumRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genPalladium", genPalladium);
+      prop.setComment("If true, Palladium will generate in the surface");
+      genPalladium = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "palladiumRate", palladiumRate);
+      prop.setComment("Approx Ores per chunk");
+      palladiumRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genPlatinum", genPlatinum);
+      prop.setComment("If true, Platinum will generate in the surface");
+      genPlatinum = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "platinumRate", platinumRate);
+      prop.setComment("Approx Ores per chunk");
+      platinumRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genCopper", genCopper);
+      prop.setComment("If true, copper will generate in the surface");
+      genCopper = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "copperRate", copperRate);
+      prop.setComment("Approx Ores per chunk");
+      copperRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genSilver", genSilver);
+      prop.setComment("If true, silver will generate in the surface");
+      genSilver = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "silverRate", silverRate);
+      prop.setComment("Approx Ores per chunk");
+      silverRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genChromium", genChromium);
+      prop.setComment("If true, chromium will generate in the surface");
+      genChromium = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "chromiumRate", chromiumRate);
+      prop.setComment("Approx Ores per chunk");
+      chromiumRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genZinc", genZinc);
+      prop.setComment("If true, zinc will generate in the surface");
+      genZinc = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "zincRate", zincRate);
+      prop.setComment("Approx Ores per chunk");
+      zincRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genTitanium", genTitanium);
+      prop.setComment("If true, titanium will generate in the surface");
+      genTitanium = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "titaniumRate", titaniumRate);
+      prop.setComment("Approx Ores per chunk");
+      titaniumRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genTungsten", genTungsten);
+      prop.setComment("If true, tungsten will generate in the surface");
+      genTungsten = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "tungstenRate", tungstenRate);
+      prop.setComment("Approx Ores per chunk");
+      tungstenRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genSulfur", genTin);
+      prop.setComment("If true, sulfur will generate in the surface");
+      genSulfur = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "sulfurRate", sulfurRate);
+      prop.setComment("Approx Ores per chunk");
+      sulfurRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genNickel", genNickel);
+      prop.setComment("If true, nickel will generate in the surface");
+      genNickel = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "nickelRate", nickelRate);
+      prop.setComment("Approx Ores per chunk");
+      nickelRate = prop.getInt();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "genLead", genLead);
+      prop.setComment("If true, lead will generate in the surface");
+      genLead = prop.getBoolean();
+      propOrder.add(prop.getName());
+
+      prop = configFile.get(cat, "leadRate", tinRate);
+      prop.setComment("Approx Ores per chunk");
+      leadRate = prop.getInt();
+      propOrder.add(prop.getName());
+
 
       // Nether ore generation
       prop = configFile.get(cat, "genCobalt", genCobalt);

@@ -41,7 +41,19 @@ public class BlockOre extends EnumBlock<BlockOre.OreTypes> {
   public enum OreTypes implements IStringSerializable, EnumBlock.IEnumMeta {
     COBALT,
     ARDITE,
-    TIN;
+    TIN,
+    ALUMINUM,
+    PALLADIUM,
+    PLATINUM,
+    COPPER,
+    SILVER,
+    CHROMIUM,
+    ZINC,
+    TITANIUM,
+    TUNGSTEN,
+    SULFUR,
+    NICKEL,
+    LEAD;
 
     public final int meta;
 

@@ -3,7 +3,7 @@
     "defaults": {
         "transform": "forge:default-block",
         "model": "tconstruct:cube_overlay_all",
-        "textures": {"all": "minecraft:blocks/stone" }
+        "textures": {"all": "minecraft:blocks/netherrack" }
     },
 	"variants": {
         "type": {
@@ -12,10 +12,10 @@
             },
             "ardite": {
                 "textures": { "overlay": "tconstruct:blocks/ore_ardite" }
-            },
-            "tin": {
-            	"textures": {"overlay": "tconstruct:blocks/ore_tin"}
             }
+            // "tin": {
+            // 	"textures": {"overlay": "tconstruct:blocks/ore_tin"}
+            // }
         }
     }
 }
